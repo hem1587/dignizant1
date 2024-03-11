@@ -1,0 +1,86 @@
+/* src/styles.css (or your preferred file) */
+
+nav {
+    background-color: rgba(255, 255, 255, 0.8); /* Faint white background */
+    padding: 10px;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Optional: Add border radius for a rounded look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the list items */
+  }
+  
+  li {
+    display: inline-block;
+    width: 80px; /* Fixed width */
+    height: 40px; /* Optional: Set a height for the list items */
+    line-height: 40px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    color: #333; /* Dark gray text color */
+    font-weight: bold;
+    font-size: 14px; /* Adjust the font size */
+    cursor: pointer;
+    text-decoration: none; /* Remove default underline */
+    position: relative;
+  }
+  
+  li::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #4285f4; /* Blue color for the underline */
+    transition: width 0.3s; /* Add a transition for a smooth effect */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  li:hover::after,
+  li.active::after {
+    width: 100%; /* Show the full width on hover or when the item is active */
+  }
+  
+  /* Optional: Add a transition for a smoother effect */
+  li {
+    transition: color 0.3s;
+  }
+  
+  li:hover {
+    color: #4285f4; /* Blue color on hover */
+  }
+  form {
+    margin-top: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input,
+  form select,
+  form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  form button {
+    background-color: #4285f4; /* Google Blue color */
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #3367d6; /* Darker shade on hover */
+  }
