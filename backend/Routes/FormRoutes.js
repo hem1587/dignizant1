@@ -6,64 +6,31 @@ const router = express.Router();
 // Create form
 router.post("/", async (req, res) => {
   try {
-    const { title, description, fields } = req.body;
+    const { title, description, questions } = req.body;
+
+    // Create new form with title and description
     const newForm = new Form({
       title,
       description,
-      fields,
-      responses: [],
+      fields: [],
+      responses: []
     });
+
+    // Save each question to the form
+    for (const question of questions) {
+      newForm.fields.push({
+        title: question.title,
+        description: question.description,
+        questionText: question.questionText,
+        options: question.options,
+        optionType: question.optionType
+      });
+    }
+
+    // Save the form to MongoDB
     await newForm.save();
+
     res.status(201).json(newForm);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server Error");
-  }
-});
-
-// Get all forms
-router.get("/", async (req, res) => {
-  try {
-    const forms = await Form.find();
-    res.json(forms);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server Error");
-  }
-});
-
-// Get form by ID
-router.get("/:formId", async (req, res) => {
-  try {
-    const formId = req.params.formId;
-    const form = await Form.findById(formId);
-
-    if (!form) {
-      return res.status(404).json({ msg: "Form not found" });
-    }
-
-    res.json(form);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server Error");
-  }
-});
-
-// Submit response to a form
-router.post("/:formId/response", async (req, res) => {
-  try {
-    const formId = req.params.formId;
-    const form = await Form.findById(formId);
-
-    if (!form) {
-      return res.status(404).json({ msg: "Form not found" });
-    }
-
-    const response = req.body;
-    form.responses.push(response);
-    await form.save();
-
-    res.json(form);
   } catch (error) {
     console.error(error);
     res.status(500).send("Server Error");
