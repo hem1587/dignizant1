@@ -91,7 +91,7 @@ form button:hover {
   position: relative;
   color: rgb(18, 17, 17);
   width: 50%;
-  margin-left: 340px;
+  margin-left: 370px;
   margin-top: 20px;
   border-radius: 10px;
   background-color: #fff;
@@ -108,7 +108,7 @@ form button:hover {
 }
 .try{
   width: 100%;
-  background-color: #4e43ea;
+  background-color: purple;
   height: 20px;
   border-radius: 2px;
 }
@@ -125,13 +125,77 @@ form button:hover {
   transition: box-shadow 0.3s;
   margin-top: 10px;
   margin-left: 10px;
-   /* Add transition for smooth effect */
+  
+   
+}
+.option{
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  text-align: center;
+}
+.questio-input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+ margin-top: 20px;
+  margin-bottom: 10px;
+  width: 70%;
+  height: 30px;
+  font-size: medium;
+  color: #141415;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+  margin-top: 10px;
+  
+  display: flex;
+  justify-content: start;
+   
+}
+.text-input{
+  border: none;
+  border-bottom: 1px solid #ccc;
+ margin-top: 20px;
+  margin-bottom: 10px;
+  width: 70%;
+  height: 25px;
+  font-size: medium;
+  color: #141415;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+  margin-top: 10px;
+  
+  display: flex;
+  justify-content: start;
+}
+.question{
+  margin-right: 90px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+ padding-right: 50px;
+  margin-bottom: 10px;
+  width: 1100px;
+  height: 30px;
+  font-size: medium;
+  color: #141415;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+  margin-top: 10px;
+}
+.question:focus {
+  outline: none;
+  border-color: rgb(0, 0, 0);
+}
+
+
+.question:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add grey shadow effect on hover */
 }
 
 .question-input:focus {
   outline: none;
   border-color: rgb(0, 0, 0);
 }
+
 
 .question-input:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add grey shadow effect on hover */
@@ -143,7 +207,7 @@ form button:hover {
   position: relative;
   color: rgb(18, 17, 17);
   width: 50%;
-  margin-left: 340px;
+  margin-left: 370px;
   margin-top: 20px;
   border-radius: 10px;
   background-color: #fff;
@@ -152,7 +216,7 @@ form button:hover {
 .question-line {
   width: 100%;
   height: 2px;
-  background-color: blue;
+  background-color: purple;
   margin-bottom: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -169,13 +233,31 @@ form button:hover {
   font-size: medium;
   color: #141415;
   font-weight: 300;
+  border-radius: 5px;
+  padding-right: 30px; /* Adjust the padding to accommodate the icon */
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M16.25 10.75L12 15.0012L7.75 10.75H16.25Z' fill='%23333333' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Adjust the position of the icon */
+  appearance: none;
+  padding-left: 10px;
+
 }
+
+.checkbox-style {
+  /* Add your custom CSS for checkbox style select element */
+  /* For example */
+  background-color: lightblue;
+  border-color: blue;
+  width: 10px;
+  /* Add other styles as needed */
+}
+
 .addoption{
   margin-right: 600px;
   text-decoration: none;
   color: #4285f4;
-  
-  
+  margin-bottom: 50px;
+  padding-bottom: 50px;
     cursor: pointer;
     
   }
@@ -205,7 +287,7 @@ form button:hover {
   display: inline-block;
   padding: 8px 16px;
   margin: 8px 0;
-  background-color: #65dfa6; /* Button background color */
+  background-color: purple; /* Button background color */
   color: #fff; /* Button text color */
   border: none;
   border-radius: 4px;
@@ -215,4 +297,182 @@ form button:hover {
 
 .button1:hover {
   background-color: #218838; /* Darken button color on hover */
+}
+.question-line2{
+  width: 100%;
+  height: 1px;
+  background-color: lightgrey;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+.vertical-line{
+  border-left: 1px solid black; /* Change color and thickness as needed */
+  height: 70%; 
+  color: lightgray;
+  border-color: lightgray
+}
+.last{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 350px;
+
+}
+.icons{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+.req{
+ 
+}
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 10px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  top: 1px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+.delete-icon {
+  color: red;
+  cursor: pointer;
+}
+
+.vertical-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  
+  border: 0.5px solid rgb(216, 216, 216);
+  box-shadow: #333;
+  position: relative;
+  color: rgb(18, 17, 17);
+  width: 30%;
+  margin-left: 520px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+
+}
+
+.icon-container {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 24px;
+  color: purple;
+  cursor: pointer;
+}
+.resdiv{
+  border: 0.5px solid rgb(216, 216, 216);
+  box-shadow: #333;
+  position: relative;
+  color: rgb(18, 17, 17);
+  width: 50%;
+  margin-left: 370px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+.linkdiv{
+  display: flex;
+  gap: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.innerdiv{
+  display: flex;
+  gap: 25px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.icon1{
+  padding-top: 10px;
+  color: #0fe364;
+}
+.checkslide{
+  display: flex;
+  gap: 25px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+}
+.tra{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.abc{
+  text-decoration: none;
+  color: rgb(1, 174, 243);
+}
+.responsemap{
+  border: 0.5px solid rgb(216, 216, 216);
+  box-shadow: #333;
+  position: relative;
+  color: rgb(18, 17, 17);
+  width: 50%;
+  margin-left: 370px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  height: 100px;
+
 }

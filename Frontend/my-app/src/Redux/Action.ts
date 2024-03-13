@@ -1,19 +1,15 @@
 import axios from 'axios';
+import { Dispatch } from 'redux';
+import { FormActionTypes, FormAction } from './Types';
 
-export const fetchForms = () => async (dispatch: any) => {
+export const getFormDataCount = () => async (dispatch: Dispatch<FormAction>) => {
   try {
-    const res = await axios.get('http://localhost:5000/api/form');
-   return dispatch({ type: 'FETCH_FORMS', payload: res.data });
+    const response = await axios.get('https://newdigback.onrender.com/api/form/length');
+    dispatch({
+      type: FormActionTypes.GET_FORM_DATA_COUNT,
+      payload: response.data.count,
+    });
   } catch (error) {
-    console.error(error);
-  }
-};
-
-export const submitForm = (formId: string, formData: any) => async (dispatch: any) => {
-  try {
-    const res = await axios.post(`http://localhost:5000/api/form/${formId}/response`, formData);
-    dispatch({ type: 'FORM_SUBMITTED', payload: res.data });
-  } catch (error) {
-    console.error(error);
+    console.error('Error fetching form data count:', error);
   }
 };

@@ -1,25 +1,22 @@
-const initialState = {
-    forms: [],
-  };
-  
-  const rootReducer = (state = initialState, action: any) => {
-    switch (action.type) {
-      case 'FETCH_FORMS':
-        return {
-          ...state,
-          forms: action.payload,
-        };
-      case 'FORM_SUBMITTED':
-        return {
-          ...state,
-          forms: state.forms.map((form: any) =>
-            form._id === action.payload._id ? action.payload : form
-          ),
-        };
-      default:
-        return state;
-    }
-  };
-  
-  export default rootReducer;
-  
+// reducer.ts
+
+import { FormActionTypes, FormAction, FormState } from './Types';
+
+
+const initialState: FormState = {
+  count: 0,
+};
+
+const formReducer = (state = initialState, action: FormAction): FormState => {
+  switch (action.type) {
+    case FormActionTypes.GET_FORM_DATA_COUNT:
+      return {
+        ...state,
+        count: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
+export default formReducer;
