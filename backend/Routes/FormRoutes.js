@@ -36,5 +36,41 @@ router.post("/", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+router.delete("/questions/:questionId", async (req, res) => {
+  const { formId, questionId } = req.params;
 
+  try {
+    const form = await Form.findById(formId);
+    if (!form) {
+      return res.status(404).json({ message: "Form not found" });
+    }
+
+    
+    form.fields.pull({ _id: questionId });
+    await form.save();
+
+    res.json({ message: "Question deleted successfully" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+router.get("/length", async (req, res) => {
+  try {
+    const formCount = await Form.countDocuments();
+    res.json({ count: formCount });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+router.get("/forms", async (req, res) => {
+  try {
+    const forms = await Form.find();
+    res.json(forms);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
 module.exports = router;
