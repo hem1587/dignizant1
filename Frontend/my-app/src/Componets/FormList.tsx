@@ -27,8 +27,8 @@ const FormList: React.FC = () => {
     <div >
       {forms.map(form => (
         <div className='responsemap' key={form._id}>
-          <h2>Title:{form.title}</h2>
-          <p>Description:{form.description}</p>
+          <h2 className='tit'><span>Title : </span>{form.title}</h2>
+          <p className='des'>Description :{form.description}</p>
         </div>
       ))}
     </div>

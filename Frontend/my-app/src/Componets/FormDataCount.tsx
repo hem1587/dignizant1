@@ -22,17 +22,17 @@ const FormDataCount: React.FC = () => {
             <Navbar />
 
             <div className='resdiv'>
-                <h2> {count} responses </h2>
+                <h2 className='count'> {count} responses </h2>
                 <div className='tra'>
                     <div className='innerdiv'>
                         <div className='linkdiv'>
-                            <FaExternalLinkSquareAlt />
+                            <FaExternalLinkSquareAlt className='icon2' />
                             <a href="" className='abc'>link to sheets</a>
                         </div>
                         <div className='icon1'><BsThreeDotsVertical /></div>
                     </div>
                     <div className='checkslide'>
-                        <p>accepting responses</p>
+                        <p className='accept'>Accepting responses</p>
                         <label className="toggle-switch">
                             <input
                                 type="checkbox"    />

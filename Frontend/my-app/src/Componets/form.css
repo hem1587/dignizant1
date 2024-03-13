@@ -425,7 +425,7 @@ input:checked + .slider:before {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 115px;
 }
 .linkdiv{
   display: flex;
@@ -434,6 +434,7 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   padding-top: 10px;
+  margin-right: 24px;
 }
 .innerdiv{
   display: flex;
@@ -444,7 +445,10 @@ input:checked + .slider:before {
 }
 .icon1{
   padding-top: 10px;
-  color: #0fe364;
+  margin-top: 8px;
+  color: purple;
+  font-size: 20px;
+  margin-right: 10px;
 }
 .checkslide{
   display: flex;
@@ -454,6 +458,16 @@ input:checked + .slider:before {
   align-items: center;
   padding-right: 20px;
 }
+.accept{
+ color: gray;
+ font-weight: 300;
+ margin-bottom: 20px;
+ font-size: smaller;
+}
+.count{
+  padding-left: 20px;
+  font-weight: 500;
+}
 .tra{
   display: flex;
   flex-direction: column;
@@ -461,7 +475,8 @@ input:checked + .slider:before {
 }
 .abc{
   text-decoration: none;
-  color: rgb(1, 174, 243);
+  color: rgb(0, 132, 255);
+  font-weight: 500;
 }
 .responsemap{
   border: 0.5px solid rgb(216, 216, 216);
@@ -475,4 +490,18 @@ input:checked + .slider:before {
   background-color: #fff;
   height: 100px;
 
+}
+.icon2{
+  color: #0fe364;
+  font-size: 20px;
+}
+.tit{
+  color: purple;
+
+}
+span{
+  color: #000;
+}
+.des{
+  color: gray;
 }
